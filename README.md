@@ -4,7 +4,7 @@ Document safety scanner and adversarial test suite for RAG pipelines.
 
 Tests whether documents fed into LLM agents carry hidden prompt injections, PII, data poisoning, or malicious file payloads — and whether those attacks survive chunking, embedding, and retrieval.
 
-📄 [Research paper](paper.html) — Parser as Trust Amplifier: Prompt Injection Survival in Document Ingestion and RAG Pipelines
+📄 [Research paper](https://htmlpreview.github.io/?https://github.com/NidhiMehta/rag-probe/blob/main/paper.html) — Parser as Trust Amplifier: Prompt Injection Survival in Document Ingestion and RAG Pipelines
 
 ---
 
