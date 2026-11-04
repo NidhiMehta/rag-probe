@@ -162,7 +162,7 @@ uv pip install -e ".[anthropic]"
 
 ---
 
-## Bug in Lexoid 1.0.24 (fixed on master)
+## Bug in Lexoid 1.0.24 (fixed on Lexoid > 1.0.24)
 
 `html_to_markdown()` requires 3 arguments. During testing, local HTML parsing failed when only 2 were passed — the `url` argument must be included for correct behaviour.
 
