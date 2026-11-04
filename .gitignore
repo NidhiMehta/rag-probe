@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+
+# Results and runtime outputs
+results/
+chromadb/
+
+# LaTeX build artifacts
+ieee_submission/paper.aux
+ieee_submission/paper.log
+ieee_submission/paper.out
+
+# macOS
+.DS_Store

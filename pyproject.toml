@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rag-probe"
+version = "0.1.0"
+description = "Document safety scanner for RAG pipelines — detects prompt injection, PII, poisoning, and malicious file payloads"
+requires-python = ">=3.12"
+dependencies = [
+    "lexoid>=0.1.24",
+    "sentence-transformers>=3.0",
+    "loguru>=0.7",
+    "pypdf>=4.0",
+]
+
+[project.optional-dependencies]
+ollama     = ["ollama>=0.4"]
+openai     = ["openai>=1.0"]
+anthropic  = ["anthropic>=0.40"]
+chroma     = ["chromadb>=1.0"]
+langchain  = ["langchain>=0.3", "langchain-community>=0.3"]
+llamaindex = ["llama-index>=0.12"]
+ner        = ["spacy>=3.7"]
+pdf        = ["reportlab>=4.0", "fpdf2>=2.7"]
+docx       = ["python-docx>=1.1"]
+all = [
+    "ollama>=0.4",
+    "openai>=1.0",
+    "chromadb>=1.0",
+    "reportlab>=4.0",
+    "fpdf2>=2.7",
+    "python-docx>=1.1",
+    "spacy>=3.7",
+]
+
+[project.scripts]
+rag-probe = "rag_probe.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["rag_probe"]
